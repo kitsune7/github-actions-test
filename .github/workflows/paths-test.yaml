@@ -1,0 +1,16 @@
+name: Test Paths
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '!src/component-b/**'
+
+jobs:
+  paths-test:
+    name: Show some output
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "It ran!"
